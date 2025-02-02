@@ -1,10 +1,10 @@
 const brandData = {
                 "NoBrand": { 
-					"N/A": 632.50 
-					},
+		    "N/A": 632.50 
+		},
                 "Wise": { 
-					"Standard": 333.50 
-					},
+		    "Standard": 333.50 
+		},
                 "CNC": {
                     "Country Oak (R)": 280.60,
                     "Luxor (L)": 347.30,
