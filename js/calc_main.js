@@ -169,9 +169,14 @@ $(document).ready(function(){
 				
 				var estimated_total_value = round_2_digits ( sub_brand_calc + wood_specie_calc + door_finish_calc + base_cabinets_calc + wall_cabinets_calc + tall_cabinets_calc + drawer_bases_calc + molding_calc + height_calc + channals_calc + acessories_calc + speciality_item );
 				
-				estimated_total_value = Math.ceil(estimated_total_value / 50) * 50;
-				estimated_total_value = Math.round(estimated_total_value / 1000) * 1000;
 				
+				//estimated_total_value = Math.round(estimated_total_value / 1000) * 1000;
+				estimated_total_value = Math.ceil(estimated_total_value / 50) * 50;
+				/*
+				if (estimated_total_value > 9999 ) {
+					estimated_total_value = Math.round(estimated_total_value / 1000) * 1000;
+				}
+				*/
 				//var range_estimate_low = round_2_digits ( estimated_total_value * 0.93 );
 				//range_estimate_low = Math.floor(estimated_total_value / 1000) * 1000;
 				range_estimate_low = Math.round((estimated_total_value * 0.93) / 1000) * 1000;
