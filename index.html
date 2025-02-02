@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Initial Estimate Price Calculator</title>
+	 <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/print.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.flex_subdiv .error {
+			position: absolute;
+			bottom: 0;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="container clearboth">
+		<div class="row price_container top_section">
+			<div class="col-md-4">
+				<img src="images/logo.png" alt="logo" id="logo" class=""/>
+			</div>
+			<div class="col-md-8">
+				<h1 class="text-left" class="">Initial Estimate</h1>
+			</div>
+		</div>
+		
+		<div class="row price_container">
+
+			<form id="priceCalcForm">
+			
+				<div class="row input_field">
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Main Brand
+							</label>
+							<div class="">
+								<select id="main_brand" name ="main_brand" required="required">
+									
+								</select>
+							</div>
+						</div>
+
+						<div id="">	
+							<label>
+								Sub Brand
+							</label>
+							<div class="">
+								<select id="sub_brand" name ="sub_brand" required="required">
+									
+								</select>
+							</div>
+						</div>					
+					</div>
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Wood Specie
+							</label>
+							<div class="">
+								<select id="wood_specie" name ="wood_specie" required="required">
+									<option name="" value="0" selected="selected">NA</option>
+									<option name="" value="5" >Maple</option>
+									<option name="" value="10" >Cherry</option>
+									<option name="" value="15" >Walnut</option>
+									<option name="" value="20" >White Oak</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="">	
+							<label>
+								Door Finish
+							</label>
+							<div class="">
+								<select id="door_finish" name ="door_finish" required="required">
+									<option name="" value="0" selected="selected">NA</option>
+									<option name="" value="5" >Paint</option>
+									<option name="" value="10" >Stain</option>
+									<option name="" value="15" >Laminate</option>
+								</select>
+							</div>
+						</div>			
+					</div>
+				</div>
+				
+				
+				
+				<div class="row input_field">
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Linear Feet
+							</label>
+							<div class="">
+								<input type="number" id="linear_feet" class="number_req form-control cabinets_sec" name ="linear_feet" value="1"/>
+							</div>
+						</div>
+
+						<div id="">	
+							<label>
+								Base Cabinets
+							</label>
+							<div class="">
+								<input type="number" id="base_cabinets" class="number_req form-control cabinets_sec" name ="base_cabinets" value="1"/>
+							</div>
+						</div>					
+					</div>
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Wall Cabinets
+							</label>
+							<div class="">
+								<input type="number" id="wall_cabinets" class="number_req form-control cabinets_sec" name ="wall_cabinets" value="1"/>
+							</div>
+						</div>
+
+						<div id="">	
+							<label>
+								Tall Cabinets
+							</label>
+							<div class="">
+								<input type="number" id="tall_cabinets" class="number_req form-control cabinets_sec" name ="tall_cabinets" value="1"/>
+							</div>
+						</div>			
+					</div>
+				</div>
+				
+				
+				<div class="row input_field">
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Drawer Bases
+							</label>
+							<div class="">
+								<select id="drawer_bases" name ="drawer_bases" required="required">
+									<option name="" value="0" selected="selected">None</option>
+									<option name="" value="7" >Minimal</option>
+									<option name="" value="15" >Many</option>
+									<option name="" value="25" >All</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="">	
+							<label>
+								Molding
+							</label>
+							<div class="">
+								<select id="molding" name ="molding" required="required">
+									<option name="" value="0" selected="selected">N/A</option>
+									<option name="" value="8" >Single</option>
+									<option name="" value="12" >Double</option>
+									<option name="" value="18" >Soffit</option>
+								</select>
+							</div>
+						</div>					
+					</div>
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Height
+							</label>
+							<div class="">
+								<select id="height" name ="height" required="required">
+									<option name="" value="0" selected="selected">8'</option>
+									<option name="" value="10" >8.5'</option>
+									<option name="" value="15" >9'</option>
+									<option name="" value="25" >9.5'</option>
+									<option name="" value="30" >10</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="">	
+							<label>
+								Channals
+							</label>
+							<div class="">
+								<select id="channals" name ="channals" required="required">
+									<option name="" value="0" selected="selected">No</option>
+									<option name="" value="25" >Yes</option>
+								</select>
+							</div>
+						</div>			
+					</div>
+				</div>
+				
+				<div class="row input_field">
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Acessories
+							</label>
+							<div class="">
+								<select id="acessories" name ="acessories" required="required">
+									<option name="" value="0" selected="selected">Select Quantity</option>
+									<option name="" value="1" >1</option>
+									<option name="" value="2" >2</option>
+									<option name="" value="3" >3</option>
+									<option name="" value="4" >4</option>
+									<option name="" value="5" >5</option>
+									<option name="" value="6" >6</option>
+									<option name="" value="7" >7</option>
+									<option name="" value="8" >8</option>
+									<option name="" value="9" >9</option>
+									<option name="" value="10" >10</option>
+								</select>
+							</div>
+						</div>
+
+											
+					</div>
+					<div class="col-md-6">
+						<div id="">
+							<label>
+								Speciality Items
+							</label>
+							<div class="">
+								<input type="number" id="speciality_item" class="number_req form-control speciality_item" name ="speciality_item" value="0"/>
+							</div>
+						</div>
+
+								
+					</div>
+				</div>
+				
+				<div class="row input_field">
+				
+					<div class="col-md-12" id="optional_calcs_div" >
+						<div id="estimated_total_breakdown" class="flex_col">
+							<div class="flex estimate_breakdown">
+								<div class="brand_text">
+									Brand 
+								</div>
+								<div class="" id="brand_text">
+									 - 
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div class="">
+									Sub Brand - <span id="sub_brand_text"> </span> 
+								</div>
+								<div class="" id="sub_brand_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div class="">
+									Wood Specie -  <span id="wood_specie_text"> </span>
+								</div>
+								<div class="" id="wood_specie_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div>
+									Door Finish - <span id="door_finish_text"> </span>
+								</div>
+								<div class="" id="door_finish_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							
+							<div class="flex estimate_breakdown">
+								<div>
+									Linear Feet
+								</div>
+								<div class="" id="linear_feet_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div>
+									Base Cabinets
+								</div>
+								<div class="" id="base_cabinets_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div>
+									Wall Cabinets
+								</div>
+								<div class="" id="wall_cabinets_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div>
+									Tall Cabinets
+								</div>
+								<div class="" id="tall_cabinets_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							
+							
+							<div class="flex estimate_breakdown">
+								<div class="">
+									Drawer Bases -  <span id="drawer_bases_text"> </span>
+								</div>
+								<div class="" id="drawer_bases_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div>
+									Molding - <span id="molding_text"> </span>
+								</div>
+								<div class="" id="molding_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+								<div class="flex estimate_breakdown">
+								<div class="">
+									Height -  <span id="height_text"> </span>
+								</div>
+								<div class="" id="height_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							<div class="flex estimate_breakdown">
+								<div>
+									Channals - <span id="channals_text"> </span>
+								</div>
+								<div class="" id="channals_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							
+							<div class="flex estimate_breakdown">
+								<div>
+									Acessories
+								</div>
+								<div class="" id="acessories_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+							
+							<div class="flex estimate_breakdown">
+								<div>
+									Speciality Items
+								</div>
+								<div class="" id="speciality_item_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
+							</div>
+						</div>			
+					</div>
+					<div>
+						<input type="checkbox" id="toggleOptional" /> Show Each Calculated Value
+					</div>
+					<div class="col-md-12">
+						<div id="estimated_total" class="flex estimate">
+							<div>
+								Estimated Total
+							</div>
+							<div class="" id="estimated_total_value">
+								<!-- estimated amount will be inserted here -->
+							</div>
+						</div>			
+					</div>
+					
+					<div class="col-md-12">
+						<div id="range" class="flex estimate">
+							<div>
+								Range
+							</div>
+							<div class="flex justify-center">
+									<div class="" id="range_estimate_low">
+									<!-- estimated amount will be inserted here -->
+								</div>
+								<span> &nbsp; - &nbsp;</span>
+								<div class="" id="range_estimate_high">
+									<!-- estimated amount will be inserted here -->
+								</div>
+								<!--
+								<input type="number" id="range_low" class="number_req form-control range_low" name ="range_low" disabled="disabled"/>
+								 <div> - </div> 
+								<input type="number" id="range_high" class="number_req form-control range_high" name ="range_high" disabled="disabled"/>
+								-->
+							</div>
+						</div>			
+					</div>
+				</div>
+						
+				<div class="row input_field justify-end">
+					
+					
+					<div class="col-md-6">
+						<div class="">
+							<input type="submit" id="price_calc_btn" type="button" class="btn btn-primary" value="Calculate">
+						</div>
+					</div>
+				</div>
+			
+			</form>	
+			<!--
+			<table class="table table-bordered" id="resultsTable">
+					<tr class="retail">
+						<td scope="row" class="thead-dark text-center">Total Retail Price</td>
+						<td id="clientPrice" class="text-center"> - </td>
+					</tr>
+					<br/>
+					<tr >
+						<td colspan="2"><input type="button" id="cmd" type="button" class="btn btn-primary" value="Print"></td>
+					</tr>
+					
+					
+			</table>	
+			-->
+		</div>
+	</div>
+	
+	
+	<div id="editor">
+	
+		<style> 
+			#editor{
+				padding:20px;
+				max-width:600px;
+				margin:10px auto 20px;
+			}
+			#logo_print{
+				max-width:60px;
+				display:inline-block;
+				margin-top: 20px;
+			}
+			#serial_num{
+				font-size:16px;
+				vertical-align:middle;
+				display:inline-block;
+				padding-top:20px;
+			}
+			#editor h2{
+				text-align:center;
+				font-size:24px;
+				border-top:2px solid #000;
+				border-bottom:2px solid #000;
+				padding:10px 0;
+				margin:10px 0;
+			}
+			#editor ul li{
+				padding:12px 10px;
+				font-size:16px;
+			}
+			#editor .text-bold{
+				font-weight:bold;
+			}
+			#editor .text-center{
+				text-align:center;
+			}
+			#editor .text-right{
+				text-align:right;
+			}
+			#editor .text-left{
+				text-align:left;
+			}
+			#editor table {  
+				font-family: arial, sans-serif;  
+				border-collapse: collapse;  
+				width: 100%;  
+				border:2px solid #000;
+				margin:10px 10px;
+			}  
+	  
+			#editor td, #editor th {  
+				border: 1px solid #dddddd;  
+				text-align: left;  
+				padding: 12px;  
+				font-size:16px;
+				vertical-align:middle;
+			}  
+			#editor .img_td, #editor .img_td td {
+				border:0;
+			}
+
+			#editor #input_data_table_t_cost , #editor #input_data_table_t_cost tr , #editor #input_data_table_t_cost tr td {
+				border: 0 ;
+				border: none;
+				margin: 0 ;
+				padding: 0 ;
+			}
+			.thead-dark{
+				color:#000;
+				font-size:24px;
+				font-weight:bold;
+				text-align:center;
+			}
+			.table_print_pdf{
+				margin:15px 10px;
+				border: 1px solid #dddddd;
+			}
+		</style> 
+		
+			
+		<!-- don't delete this -->
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/print.min.js"></script>
+	<script src="js/jquery_validate.js"></script>	
+	<script src="js/brandData.js"></script>	
+	<script src="js/calc_main.js"></script>
+	 	 
+	<script>
+		$(document).ready(function(){
+			$('#cmd').click(function () {   
+				printJS('editor', 'html');								
+			});				 
+		});	
+	 </script>
+	 
+	
+
+</body>
+</html>
