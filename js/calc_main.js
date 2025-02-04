@@ -133,7 +133,7 @@ $(document).ready(function(){
 				var base_cabinets_calc = 0;
 				var wall_cabinets_calc = 0;
 				
-				if (base_cabinets || !wall_cabinets || !tall_cabinets) { 
+				if (base_cabinets) { 
 					base_cabinets_calc = sub_brand * ( base_cabinets - Math.floor(linear_feet * 2/5 ) ) *base_cabinets_price_per_feet * base_cabinets_factor;
 				}
 				if (wall_cabinets) { 
