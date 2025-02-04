@@ -149,7 +149,7 @@ h1{
 h1::after {
     text-align: center;
     content: ' ';
-    margin: 12px auto 0;
+    margin: 12px 0 0 22%;
     width: 50px;
     display: block;
     height: 2px;
