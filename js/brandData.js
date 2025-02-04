@@ -1,6 +1,6 @@
 const brandData = {
-                "NoBrand": { 
-		    "N/A": 632.50 
+                "N/A": { 
+		    "NA": 632.50 
 		},
                 "Wise": { 
 		    "Standard": 333.50 
