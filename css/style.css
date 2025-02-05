@@ -12,7 +12,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-	text-align: center;
+    text-align: center;
+    gap: 4%;
 }
 .price_container{
 	max-width:767px;
@@ -213,7 +214,7 @@ form{
     cursor: not-allowed;
 }
 #logo{
-	max-width:100px;
+	max-width: 90px;
 }
 select, #cmd{
 	width:100%;
