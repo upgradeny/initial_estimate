@@ -64,9 +64,9 @@ $(document).ready(function(){
 			
 			jQuery('#toggleOptional').change(function () {
 				if ($(this).is(':checked')) {
-					$('#optional_calcs_div').slideDown(); // Show with animation
+					$('.calc_field_hidden').show(); // Show with animation
 				} else {
-					$('#optional_calcs_div').slideUp(); // Hide with animation
+					$('.calc_field_hidden').hide(); // Hide with animation
 				}
 			});
 
@@ -120,7 +120,7 @@ $(document).ready(function(){
 			
 			// perform validation and calculations on click
 				
-			jQuery( "#price_calc_btn" ).click(function( event ){
+			jQuery( "#price_calc_btn , select , input.form-control" ).on("click change", function(event) {
 
 				event.preventDefault();
 
