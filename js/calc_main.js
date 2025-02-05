@@ -43,6 +43,25 @@ $(document).ready(function(){
                 }
             }
 			
+			
+			
+			
+    
+
+
+			function populateAccessories(selector, min, max) {
+				let select = jQuery(selector);
+				select.empty(); // Clear existing options
+				select.append(`<option value="0" selected="selected">Select Quantity</option>`);
+
+				for (let i = min; i <= max; i++) {
+					select.append(`<option value="${i}">${i}</option>`);
+				}
+			}
+
+			populateAccessories("#accessories", 1, 50);
+
+			
 			jQuery('#toggleOptional').change(function () {
 				if ($(this).is(':checked')) {
 					$('#optional_calcs_div').slideDown(); // Show with animation
@@ -88,12 +107,14 @@ $(document).ready(function(){
 					min: 0,
 					max: 9999999
 				},
+				
 				speciality_item: {
 					required: true,
 					number: true,
 					min: 0,
 					max: 999999999999999
 				},
+				
 			  }
 			});
 			
@@ -161,8 +182,9 @@ $(document).ready(function(){
 				let height_calc = sub_brand_calc * height / 100; 
 				let channals_calc = sub_brand_calc * channals / 100; 
 
-				let acessories = jQuery('#acessories').val();
-				let acessories_calc = acessories * acessories_factor; 
+				let accessories = jQuery('#accessories').val();
+				console.log(accessories);
+				let acessories_calc = accessories * acessories_factor; 
 
 				
 				let speciality_item = parseFloat ( jQuery('#speciality_item').val() );
