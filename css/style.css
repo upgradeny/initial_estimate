@@ -231,7 +231,7 @@ select, #cmd{
 }
 .dollar_sign {
     position: absolute;
-	padding: 0 15px;
+	padding: 0 10px;
 	/*
 	color: #fff;
     float: right;
@@ -247,16 +247,19 @@ select, #cmd{
 
 
 .input_field_n_dollar input.form-control{
-	padding-left: 25px;
+	padding-left: 20px;
 	color:#231f20;
 }
 .input_field_n_dollar input.description {
 	padding-left:15px;
 }
+.input_field_n_dollar .dollar_sign{
+	padding: 3px 0 3px 10px;
+}
 .input_field_n_dollar input.form-control,.input_field_n_dollar select.form-control,.input_field_n_dollar .dollar_sign{
-	height: 45px;
+	/*height: 45px;
 	line-height: 45px;
-	border-radius:0;
+	border-radius:0;*/
 }
 .btn.btn-primary{
 	padding: 12px 20px;
