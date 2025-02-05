@@ -109,6 +109,7 @@ $(document).ready(function(){
 				},
 				
 				speciality_item: {
+					required: false,
 					number: true,
 					min: 0,
 					max: 999999999999999
