@@ -42,17 +42,22 @@
 									
 								</select>
 							</div>
+							
 						</div>
 
 						<div id="subbrand_div">	
 							<label>
 								Sub Brand
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="sub_brand" name ="sub_brand" required="required">
 									
 								</select>
+								<div class="calc_field_hidden" id="sub_brand_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
+							
 						</div>					
 					</div>
 					<div class="col-md-6">
@@ -60,7 +65,7 @@
 							<label>
 								Wood Specie
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="wood_specie" name ="wood_specie" required="required">
 									<option name="" value="0" selected="selected">N/A</option>
 									<option name="" value="5" >Maple</option>
@@ -68,21 +73,29 @@
 									<option name="" value="15" >Walnut</option>
 									<option name="" value="20" >White Oak</option>
 								</select>
+								<div class="calc_field_hidden" id="wood_specie_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
+							
 						</div>
 
 						<div id="">	
 							<label>
 								Door Finish
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="door_finish" name ="door_finish" required="required">
 									<option name="" value="0" selected="selected">N/A</option>
 									<option name="" value="5" >Paint</option>
 									<option name="" value="10" >Stain</option>
 									<option name="" value="15" >Laminate</option>
 								</select>
+								<div class="calc_field_hidden" id="door_finish_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
+							
 						</div>			
 					</div>
 				</div>
@@ -104,8 +117,11 @@
 							<label>
 								Tall Cabinets
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<input type="number" id="tall_cabinets" class="number_req form-control cabinets_sec" name ="tall_cabinets" value="0"/>
+								<div class="calc_field_hidden" id="tall_cabinets_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>	
 
@@ -117,8 +133,11 @@
 							<label>
 								Base Cabinets
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<input type="number" id="base_cabinets" class="number_req form-control cabinets_sec" name ="base_cabinets" />
+								<div class="calc_field_hidden" id="base_cabinets_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>	
 						
@@ -126,8 +145,11 @@
 							<label>
 								Wall Cabinets
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<input type="number" id="wall_cabinets" class="number_req form-control cabinets_sec" name ="wall_cabinets" />
+								<div class="calc_field_hidden" id="wall_cabinets_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>
 
@@ -142,13 +164,16 @@
 							<label>
 								Drawer Bases
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="drawer_bases" name ="drawer_bases" required="required">
 									<option name="" value="0" selected="selected">None</option>
 									<option name="" value="7" >Minimal</option>
 									<option name="" value="15" >Many</option>
 									<option name="" value="25" >All</option>
 								</select>
+								<div class="calc_field_hidden" id="drawer_bases_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>
 
@@ -156,13 +181,16 @@
 							<label>
 								Molding
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="molding" name ="molding" required="required">
 									<option name="" value="0" selected="selected">N/A</option>
 									<option name="" value="8" >Single</option>
 									<option name="" value="12" >Double</option>
 									<option name="" value="18" >Soffit</option>
 								</select>
+								<div class="calc_field_hidden" id="molding_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>					
 					</div>
@@ -171,7 +199,7 @@
 							<label>
 								Height
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="height" name ="height" required="required">
 									<option name="" value="0" selected="selected">8'</option>
 									<option name="" value="10" >8.5'</option>
@@ -179,6 +207,9 @@
 									<option name="" value="25" >9.5'</option>
 									<option name="" value="30" >10</option>
 								</select>
+								<div class="calc_field_hidden" id="height_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>
 
@@ -186,11 +217,14 @@
 							<label>
 								Channals
 							</label>
-							<div class="">
+							<div class="calc_field_flex">
 								<select id="channals" name ="channals" required="required">
 									<option name="" value="0" selected="selected">No</option>
 									<option name="" value="25" >Yes</option>
 								</select>
+								<div class="calc_field_hidden" id="channals_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>			
 					</div>
@@ -200,10 +234,13 @@
 					<div class="col-md-6">
 						<div id="accessories-container">
 							<label>Accessories</label>
-							<div>
+							<div class="calc_field_flex">
 								<select id="accessories" name="accessories" required="required">
 									<option value="0" selected="selected">Select Quantity</option>
 								</select>
+								<div class="calc_field_hidden" id="acessories_calc">
+									<!-- estimated amount will be inserted here -->
+								</div>
 							</div>
 						</div>
 
@@ -226,134 +263,11 @@
 				
 				<div class="row input_field">
 				
-					<div class="col-md-12" id="optional_calcs_div" >
-						<div id="estimated_total_breakdown" class="flex_col">
-							<div class="flex estimate_breakdown">
-								<div class="brand_text">
-									Brand 
-								</div>
-								<div class="" id="brand_text">
-									 - 
-								</div>
-							</div>
-							<div class="flex estimate_breakdown">
-								<div class="">
-									Sub Brand - <span id="sub_brand_text"> </span> 
-								</div>
-								<div class="" id="sub_brand_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							<div class="flex estimate_breakdown">
-								<div class="">
-									Wood Specie -  <span id="wood_specie_text"> </span>
-								</div>
-								<div class="" id="wood_specie_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							<div class="flex estimate_breakdown">
-								<div>
-									Door Finish - <span id="door_finish_text"> </span>
-								</div>
-								<div class="" id="door_finish_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							
-							<div class="flex estimate_breakdown">
-								<div>
-									Linear Feet
-								</div>
-								<div class="" id="linear_feet_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-
-							<div class="flex estimate_breakdown">
-								<div>
-									Tall Cabinets
-								</div>
-								<div class="" id="tall_cabinets_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							
-							<div class="flex estimate_breakdown">
-								<div>
-									Base Cabinets
-								</div>
-								<div class="" id="base_cabinets_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							<div class="flex estimate_breakdown">
-								<div>
-									Wall Cabinets
-								</div>
-								<div class="" id="wall_cabinets_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							
-							
-							
-							<div class="flex estimate_breakdown">
-								<div class="">
-									Drawer Bases -  <span id="drawer_bases_text"> </span>
-								</div>
-								<div class="" id="drawer_bases_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							<div class="flex estimate_breakdown">
-								<div>
-									Molding - <span id="molding_text"> </span>
-								</div>
-								<div class="" id="molding_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-								<div class="flex estimate_breakdown">
-								<div class="">
-									Height -  <span id="height_text"> </span>
-								</div>
-								<div class="" id="height_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							<div class="flex estimate_breakdown">
-								<div>
-									Channals - <span id="channals_text"> </span>
-								</div>
-								<div class="" id="channals_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							
-							<div class="flex estimate_breakdown">
-								<div>
-									Acessories
-								</div>
-								<div class="" id="acessories_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-							
-							<div class="flex estimate_breakdown">
-								<div>
-									Speciality Items
-								</div>
-								<div class="" id="speciality_item_calc">
-									<!-- estimated amount will be inserted here -->
-								</div>
-							</div>
-						</div>			
-					</div>
-					<div>
+					
+					<div class="col-md-12">
 						<input type="checkbox" id="toggleOptional" /> Show Each Calculated Value
 					</div>
-					<div class="col-md-12">
+					<div class="offset-md-4 col-md-8">
 						<div id="estimated_total" class="flex estimate">
 							<div>
 								Estimated Total
@@ -364,7 +278,7 @@
 						</div>			
 					</div>
 					
-					<div class="col-md-12">
+					<div class="offset-md-4 col-md-8">
 						<div id="range" class="flex estimate">
 							<div>
 								Range
