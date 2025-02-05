@@ -50,10 +50,11 @@ input.form-control, select.form-control{
     padding: 0;
     margin: 0;
 }
-h1{
+
+.h1, h1 {
+    font-size: 2.25rem;
 	color:#231f20;
 }
-
 label {
     display: inline-block;
     
@@ -212,7 +213,7 @@ form{
     cursor: not-allowed;
 }
 #logo{
-	max-width:125px;
+	max-width:100px;
 }
 select, #cmd{
 	width:100%;
