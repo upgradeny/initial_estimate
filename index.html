@@ -44,7 +44,7 @@
 							</div>
 						</div>
 
-						<div id="">	
+						<div id="subbrand_div">	
 							<label>
 								Sub Brand
 							</label>
@@ -62,7 +62,7 @@
 							</label>
 							<div class="">
 								<select id="wood_specie" name ="wood_specie" required="required">
-									<option name="" value="0" selected="selected">NA</option>
+									<option name="" value="0" selected="selected">N/A</option>
 									<option name="" value="5" >Maple</option>
 									<option name="" value="10" >Cherry</option>
 									<option name="" value="15" >Walnut</option>
@@ -77,7 +77,7 @@
 							</label>
 							<div class="">
 								<select id="door_finish" name ="door_finish" required="required">
-									<option name="" value="0" selected="selected">NA</option>
+									<option name="" value="0" selected="selected">N/A</option>
 									<option name="" value="5" >Paint</option>
 									<option name="" value="10" >Stain</option>
 									<option name="" value="15" >Laminate</option>
@@ -99,7 +99,20 @@
 								<input type="number" id="linear_feet" class="number_req form-control cabinets_sec" name ="linear_feet" value="1"/>
 							</div>
 						</div>
+						
+						<div id="">	
+							<label>
+								Tall Cabinets
+							</label>
+							<div class="">
+								<input type="number" id="tall_cabinets" class="number_req form-control cabinets_sec" name ="tall_cabinets" value="0"/>
+							</div>
+						</div>	
 
+										
+					</div>
+					<div class="col-md-6">
+					
 						<div id="">	
 							<label>
 								Base Cabinets
@@ -107,9 +120,8 @@
 							<div class="">
 								<input type="number" id="base_cabinets" class="number_req form-control cabinets_sec" name ="base_cabinets" />
 							</div>
-						</div>					
-					</div>
-					<div class="col-md-6">
+						</div>	
+						
 						<div id="">
 							<label>
 								Wall Cabinets
@@ -119,14 +131,7 @@
 							</div>
 						</div>
 
-						<div id="">	
-							<label>
-								Tall Cabinets
-							</label>
-							<div class="">
-								<input type="number" id="tall_cabinets" class="number_req form-control cabinets_sec" name ="tall_cabinets" value="0"/>
-							</div>
-						</div>			
+								
 					</div>
 				</div>
 				
@@ -193,23 +198,11 @@
 				
 				<div class="row input_field">
 					<div class="col-md-6">
-						<div id="">
-							<label>
-								Acessories
-							</label>
-							<div class="">
-								<select id="acessories" name ="acessories" required="required">
-									<option name="" value="0" selected="selected">Select Quantity</option>
-									<option name="" value="1" >1</option>
-									<option name="" value="2" >2</option>
-									<option name="" value="3" >3</option>
-									<option name="" value="4" >4</option>
-									<option name="" value="5" >5</option>
-									<option name="" value="6" >6</option>
-									<option name="" value="7" >7</option>
-									<option name="" value="8" >8</option>
-									<option name="" value="9" >9</option>
-									<option name="" value="10" >10</option>
+						<div id="accessories-container">
+							<label>Accessories</label>
+							<div>
+								<select id="accessories" name="accessories" required="required">
+									<option value="0" selected="selected">Select Quantity</option>
 								</select>
 							</div>
 						</div>
@@ -222,7 +215,7 @@
 								Speciality Items
 							</label>
 							<div class="">
-								<input type="number" id="speciality_item" class="number_req form-control speciality_item" name ="speciality_item" value="0"/>
+								<input type="text" id="speciality_item" class="number_req form-control speciality_item" name ="speciality_item" value="0"/>
 							</div>
 						</div>
 
