@@ -207,40 +207,56 @@ $(document).ready(function(){
 				//range_estimate_high = Math.ceil(estimated_total_value / 1000) * 1000;
 				range_estimate_high = Math.round((estimated_total_value * 1.07) / 1000) * 1000;
 				
-				jQuery('#estimated_total_value').text(" $ " + estimated_total_value);
-				jQuery('#range_estimate_low').text(" $ " +range_estimate_low);
-				jQuery('#range_estimate_high').text(" $ " +range_estimate_high);
+				jQuery('#estimated_total_value , #pdf_estimated_total_value').text(" $ " + estimated_total_value);
+				jQuery('#range_estimate_low , #pdf_range_estimate_low').text(" $ " +range_estimate_low);
+				jQuery('#range_estimate_high , #pdf_range_estimate_high').text(" $ " +range_estimate_high);
 				
 				
 				
-				jQuery('#brand_text').text(jQuery('#main_brand  option:selected').text());
-				jQuery('#sub_brand_text').text(jQuery('#sub_brand  option:selected').text());
-				jQuery('#wood_specie_text').text(jQuery('#wood_specie  option:selected').text());
-				jQuery('#door_finish_text').text(jQuery('#door_finish  option:selected').text());
-				jQuery('#drawer_bases_text').text(jQuery('#drawer_bases  option:selected').text());
-				jQuery('#molding_text').text(jQuery('#molding  option:selected').text());
-				jQuery('#height_text').text(jQuery('#height  option:selected').text());
-				jQuery('#channals_text').text(jQuery('#channals  option:selected').text());
+				jQuery('#brand_text , #pdf_brand_text').text(jQuery('#main_brand  option:selected').text());
+				jQuery('#sub_brand_text , #pdf_sub_brand_text').text(jQuery('#sub_brand  option:selected').text());
+				jQuery('#wood_specie_text , #pdf_wood_specie_text').text(jQuery('#wood_specie  option:selected').text());
+				jQuery('#door_finish_text , #pdf_door_finish_text').text(jQuery('#door_finish  option:selected').text());
+				jQuery('#drawer_bases_text , #pdf_drawer_bases_text').text(jQuery('#drawer_bases  option:selected').text());
+				jQuery('#molding_text , #pdf_molding_text').text(jQuery('#molding  option:selected').text());
+				jQuery('#height_text , #pdf_height_text').text(jQuery('#height  option:selected').text());
+				jQuery('#channals_text , #pdf_channals_text').text(jQuery('#channals  option:selected').text());
 				
-				jQuery('#sub_brand_calc').text(  " $ " + round_2_digits ( sub_brand_calc ) );
-				jQuery('#wood_specie_calc').text( " $ " + round_2_digits ( wood_specie_calc ) );
-				jQuery('#door_finish_calc').text( " $ " + round_2_digits ( door_finish_calc ) );
-				jQuery('#base_cabinets_calc').text( " $ " + round_2_digits ( base_cabinets_calc ) );
+				jQuery('#sub_brand_calc , #pdf_sub_brand_calc').text(  " $ " + round_2_digits ( sub_brand_calc ) );
+				jQuery('#wood_specie_calc , #pdf_wood_specie_calc').text( " $ " + round_2_digits ( wood_specie_calc ) );
+				jQuery('#door_finish_calc , #pdf_door_finish_calc').text( " $ " + round_2_digits ( door_finish_calc ) );
+				jQuery('#base_cabinets_calc , #pdf_base_cabinets_calc').text( " $ " + round_2_digits ( base_cabinets_calc ) );
 				
-				jQuery('#linear_feet_calc').text(linear_feet + " ft ");
-				jQuery('#wood_specie_calc').text(  " $ " + round_2_digits ( wood_specie_calc ) );
-				jQuery('#base_cabinets_calc').text(  " $ " + round_2_digits ( base_cabinets_calc ) );
-				jQuery('#wall_cabinets_calc').text(  " $ " + round_2_digits ( wall_cabinets_calc ) );
-				jQuery('#tall_cabinets_calc').text(  " $ " + round_2_digits ( tall_cabinets_calc ) );
+				jQuery('#linear_feet_calc , #pdf_linear_feet_calc').text(linear_feet + " ft ");
+				jQuery('#wood_specie_calc , #pdf_wood_specie_calc').text(  " $ " + round_2_digits ( wood_specie_calc ) );
+				jQuery('#base_cabinets_calc , #pdf_base_cabinets_calc').text(  " $ " + round_2_digits ( base_cabinets_calc ) );
+				jQuery('#wall_cabinets_calc , #pdf_wall_cabinets_calc').text(  " $ " + round_2_digits ( wall_cabinets_calc ) );
+				jQuery('#tall_cabinets_calc , #pdf_tall_cabinets_calc').text(  " $ " + round_2_digits ( tall_cabinets_calc ) );
 				
-				jQuery('#drawer_bases_calc').text(  " $ " + round_2_digits ( drawer_bases_calc ) );
-				jQuery('#molding_calc').text(  " $ " + round_2_digits ( molding_calc ) );
-				jQuery('#height_calc').text(  " $ " + round_2_digits ( height_calc ) );
-				jQuery('#channals_calc').text(  " $ " + round_2_digits ( channals_calc ) );
+				jQuery('#drawer_bases_calc , #pdf_drawer_bases_calc').text(  " $ " + round_2_digits ( drawer_bases_calc ) );
+				jQuery('#molding_calc , #pdf_molding_calc').text(  " $ " + round_2_digits ( molding_calc ) );
+				jQuery('#height_calc , #pdf_height_calc').text(  " $ " + round_2_digits ( height_calc ) );
+				jQuery('#channals_calc , #pdf_channals_calc').text(  " $ " + round_2_digits ( channals_calc ) );
 				
-				jQuery('#acessories_calc').text(  " $ " + round_2_digits ( acessories_calc ) );
-				jQuery('#speciality_item_calc').text(  " $ " + round_2_digits ( speciality_item ) );
+				jQuery('#acessories_calc , #pdf_accessories_calc').text(  " $ " + round_2_digits ( acessories_calc ) );
+				jQuery('#speciality_item_calc , #pdf_speciality_item_calc').text(  " $ " + round_2_digits ( speciality_item ) );
 				
+				
+				
+				
+				jQuery('#pdf_linear_feet_text').text(linear_feet);
+				jQuery('#pdf_wood_specie_text').text(wood_specie);
+				jQuery('#pdf_door_finish_text').text(door_finish);
+				jQuery('#pdf_base_cabinets_text').text(base_cabinets);
+				jQuery('#pdf_wall_cabinets_text').text(wall_cabinets);
+				jQuery('#pdf_tall_cabinets_text').text(tall_cabinets);
+				/*
+				jQuery('#pdf_drawer_bases_text').text(jQuery('#drawer_bases  option:selected').text());
+				jQuery('#pdf_molding_text').text(jQuery('#molding  option:selected').text());
+				jQuery('#pdf_height_text').text(jQuery('#height  option:selected').text());
+				jQuery('#pdf_channals_text').text(jQuery('#channals  option:selected').text());
+				*/
+				jQuery('#pdf_accessories_text').text(accessories);
 				
 				
 			});	
