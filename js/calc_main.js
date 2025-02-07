@@ -242,6 +242,8 @@ $(document).ready(function(){
 				jQuery('#speciality_item_calc , #pdf_speciality_item_calc').text(  " $ " + round_2_digits ( speciality_item ) );
 				
 				
+				let currentDate = new Date().toLocaleString();
+				jQuery('#pdf_current_date').text(currentDate);
 				
 				
 				jQuery('#pdf_linear_feet_text').text(linear_feet);
