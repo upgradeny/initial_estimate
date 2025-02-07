@@ -285,8 +285,8 @@ select, #cmd{
 	background:#eb2227;
 }
 #cmd:hover{
-	background:#eeeeef;
-	color:#000;
+	background:#000;
+	color:#fff;
 }
 .btn_plus,.btn_minus,.plus,.minus {
     border: 0;
