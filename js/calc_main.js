@@ -82,7 +82,7 @@ console.log(classes);
     });
 	
 	*/
-	
+	/*
 	jQuery(".show_calc_field_hidden").change(function () {
 		
         let hiddenField = $(this).parent(".calc_field_flex").find(".calc_field_hidden");
@@ -99,19 +99,29 @@ console.log(classes);
 		//event.preventDefault();
     });
 	
+*/
 
 
 
-/*
 	
 			jQuery('#toggleOptional').change(function () {
 				if ($(this).is(':checked')) {
-					$('.calc_field_hidden').show(); // Show with animation
+					$('#list_output , .estimate_breakdown').show(); // Show with animation
 				} else {
-					$('.calc_field_hidden').hide(); // Hide with animation
+					$('#list_output , .estimate_breakdown').hide(); // Hide with animation
 				}
 			});
-*/
+			
+			
+			 $('#show_calcs').click(function () {   
+				$('#list_output , .estimate_breakdown').show();
+				
+				$("html, body").animate({
+					scrollTop: $("#list_output").offset().top + 50
+				}, 800);
+											
+			});	
+
 
             populateMainBrands();
             populateSubBrands();
@@ -288,9 +298,9 @@ console.log(classes);
 				let currentDate = new Date().toLocaleString();
 				jQuery('#pdf_current_date').text(currentDate);
 				
-				jQuery('.estimate , #range').slideDown(500);
+				jQuery('.estimate , #range , .show_values_section').slideDown(400);
 				jQuery('#range').css("display", "inline-block")
-				
+				jQuery('.show_values_section').css("display", "flex")
 				
 				jQuery('#pdf_linear_feet_text').text(linear_feet);
 				jQuery('#pdf_wood_specie_text').text(wood_specie);
