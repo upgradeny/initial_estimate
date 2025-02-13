@@ -61,7 +61,30 @@ $(document).ready(function(){
 
 			populateAccessories("#accessories", 1, 50);
 
-			
+
+
+    jQuery(".show_calc_field_hidden").click(function () {
+		
+        let hiddenField = $(this).parent(".calc_field_flex").find(".calc_field_hidden");
+let classes = hiddenField.attr("class");
+console.log(classes);
+		console.log(hiddenField);
+        let icon = $(this).find(".icon");
+
+        if (hiddenField.hasClass("hidden")) {
+            hiddenField.removeClass("hidden").slideDown();
+            $(this).html('<span class="icon">❌</span>');  // Change to "Hide" with ❌ icon
+        } else {
+            hiddenField.addClass("hidden").slideUp();
+            $(this).html('<span class="icon">👁️</span>');  // Change back to "Show" with eye icon
+        }
+		event.preventDefault();
+    });
+
+
+
+
+	
 			jQuery('#toggleOptional').change(function () {
 				if ($(this).is(':checked')) {
 					$('.calc_field_hidden').show(); // Show with animation
@@ -244,6 +267,9 @@ $(document).ready(function(){
 				
 				let currentDate = new Date().toLocaleString();
 				jQuery('#pdf_current_date').text(currentDate);
+				
+				jQuery('.estimate , #range').slideDown(500);
+				jQuery('#range').css("display", "inline-block")
 				
 				
 				jQuery('#pdf_linear_feet_text').text(linear_feet);
