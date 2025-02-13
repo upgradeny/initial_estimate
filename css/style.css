@@ -95,9 +95,11 @@ label {
 .flex{
 	display:flex;
 }
+
 .estimate {
 	gap : 10px;
     justify-content: center;
+	display:none;
 	/*
 	font-weight:bold;
     text-align: left;
@@ -308,7 +310,7 @@ select, #cmd{
 	width:100%;
 }
 #cmd{
-	background:#eb2227;
+	/* background:#eb2227; */
 }
 #cmd:hover{
 	background:#000;
@@ -404,7 +406,7 @@ button, input, optgroup, select, textarea {
     gap: 10px;
 }
 .calc_field_hidden {
-    flex-basis: 40%;
+    flex-basis: 42%;
     background: #fff;
     font-weight: bold;
     padding: 0;
@@ -413,7 +415,6 @@ button, input, optgroup, select, textarea {
     align-content: center;
     text-align: center;
     border: 1px solid #000;
-	display:none;
 }
 
 .flex_row_inp {
@@ -452,4 +453,24 @@ div#range {
 }
 div#range span{
     color: #fff;
+}
+#cmd{
+	width:auto;
+	display:inline-block;
+	padding:5px;
+}
+#cmd svg{
+	width:auto;
+	height:32px;
+}
+
+.hidden {
+    display: none;
+}
+button.show_calc_field_hidden , .show_calc_field_hidden , .show_calc_field_hidden:focus{
+	border:0;
+	outline:0;
+}
+#range.estimate{
+	display:none;
 }
