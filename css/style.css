@@ -36,7 +36,7 @@ h1,h2{
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 4%;
+	margin-bottom:20px !important;
 }
 .price_container{
 	max-width: 800px;
@@ -46,7 +46,7 @@ p,span,a,label,li, input::placeholder{
 	color:#000;
 }
 .input_field{
-	padding:5px 0;
+	padding:15px 0;
     margin-bottom: 10px;
 }
 input,select{
@@ -76,7 +76,7 @@ input.form-control, select.form-control{
 }
 
 .h1, h1 {
-    font-size: 2.25rem;
+    font-size: 3.25rem;
 	color:#231f20;
 }
 label {
@@ -124,12 +124,16 @@ label {
 }
 
 .estimate_breakdown{
+	/*
 	display: flex;
     justify-content: space-between;
     border: 1px solid #fff;
-    padding: 5px 10px;
 	margin-top:10px;
+	*/
+    padding: 5px 10px;
+	
 }
+
 #optional_calcs_div{
 	display:none;
 }
@@ -221,7 +225,7 @@ h2{
 	margin:0;
 }
 form{
-	padding:10px 0 20px;
+	padding:10px 0 5px;
 	margin: 0 auto;
 	width:100%;
 }
@@ -242,7 +246,7 @@ form{
     cursor: not-allowed;
 }
 #logo{
-	max-width: 90px;
+	max-width: 160px;
 }
 select, #cmd{
 	width:100%;
@@ -406,7 +410,7 @@ button, input, optgroup, select, textarea {
     gap: 10px;
 }
 .calc_field_hidden {
-    flex-basis: 42%;
+    flex-basis: 50%;
     background: #fff;
     font-weight: bold;
     padding: 0;
@@ -458,19 +462,34 @@ div#range span{
 	width:auto;
 	display:inline-block;
 	padding:5px;
+	background:none;
+	color: #000;
 }
 #cmd svg{
 	width:auto;
 	height:32px;
 }
-
-.hidden {
+.show_values_section{
+	display:flex;
+	justify-content : center;
+	gap : 20px;
+}
+#show_calcs{
+	cursor:pointer;
+}
+#show_calcs:hover{
+	opacity:0.8;
+}
+.hidden , .show_values_section{
     display: none;
 }
 button.show_calc_field_hidden , .show_calc_field_hidden , .show_calc_field_hidden:focus{
 	border:0;
 	outline:0;
 }
-#range.estimate{
+#range.estimate , .show_calc_field_hidden{
+	display:none;
+}
+#list_output{
 	display:none;
 }
