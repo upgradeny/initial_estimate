@@ -27,7 +27,7 @@
 				<img src="images/logo.png" alt="logo" id="logo" class=""/>
 			</div>
 			<div class="">
-				<h1 class="text-left" class="">Initial Estimate</h1>
+				<h1 class="text-left" class="">Cabinet Cost Estimator</h1>
 			</div>
 		</div>
 		
@@ -58,9 +58,11 @@
 								<select id="sub_brand" name ="sub_brand" required="required" class="form-control">
 									
 								</select>
-								<div class="calc_field_hidden" id="sub_brand_calc">
+								
+								<div class="calc_field_hidden hidden" id="sub_brand_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 							
 						</div>					
@@ -78,9 +80,10 @@
 									<option name="" value="15" >Walnut</option>
 									<option name="" value="20" >White Oak</option>
 								</select>
-								<div class="calc_field_hidden" id="wood_specie_calc">
+								<div class="calc_field_hidden hidden" id="wood_specie_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 							
 						</div>
@@ -96,9 +99,10 @@
 									<option name="" value="10" >Stain</option>
 									<option name="" value="15" >Laminate</option>
 								</select>
-								<div class="calc_field_hidden" id="door_finish_calc">
+								<div class="calc_field_hidden hidden" id="door_finish_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 							
 						</div>			
@@ -132,9 +136,10 @@
 									<option name="" value="25" >9.5'</option>
 									<option name="" value="30" >10</option>
 								</select>
-								<div class="calc_field_hidden" id="height_calc">
+								<div class="calc_field_hidden hidden" id="height_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 						</div>
 										
@@ -146,9 +151,10 @@
 							</label>
 							<div class="calc_field_flex">
 								<input type="number" id="base_cabinets" class="number_req form-control cabinets_sec" name ="base_cabinets" />
-								<div class="calc_field_hidden" id="base_cabinets_calc">
+								<div class="calc_field_hidden hidden" id="base_cabinets_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 						</div>	
 						
@@ -158,9 +164,10 @@
 							</label>
 							<div class="calc_field_flex">
 								<input type="number" id="wall_cabinets" class="number_req form-control cabinets_sec" name ="wall_cabinets" />
-								<div class="calc_field_hidden" id="wall_cabinets_calc">
+								<div class="calc_field_hidden hidden" id="wall_cabinets_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 						</div>
 
@@ -179,9 +186,10 @@
 							</label>
 							<div class="calc_field_flex">
 								<input type="number" id="tall_cabinets" class="number_req form-control cabinets_sec" name ="tall_cabinets" value="0"/>
-								<div class="calc_field_hidden" id="tall_cabinets_calc">
+								<div class="calc_field_hidden hidden" id="tall_cabinets_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 						</div>	
 						
@@ -196,9 +204,10 @@
 									<option name="" value="15" >Many</option>
 									<option name="" value="25" >All</option>
 								</select>
-								<div class="calc_field_hidden" id="drawer_bases_calc">
+								<div class="calc_field_hidden hidden" id="drawer_bases_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 						</div>
 
@@ -213,9 +222,10 @@
 									<option name="" value="12" >Double</option>
 									<option name="" value="18" >Soffit</option>
 								</select>
-								<div class="calc_field_hidden" id="molding_calc">
+								<div class="calc_field_hidden hidden" id="molding_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden"><span class="icon">👁️</span></button>
 							</div>
 						</div>					
 					</div>
@@ -232,9 +242,10 @@
 									<option name="" value="0" selected="selected">No</option>
 									<option name="" value="25" >Yes</option>
 								</select>
-								<div class="calc_field_hidden" id="channals_calc">
+								<div class="calc_field_hidden hidden" id="channals_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden "><span class="icon">👁️</span></button>
 							</div>
 						</div>	
 
@@ -244,9 +255,10 @@
 								<select id="accessories" name="accessories" required="required" class="form-control">
 									<option value="0" selected="selected">Select Quantity</option>
 								</select>
-								<div class="calc_field_hidden" id="acessories_calc">
+								<div class="calc_field_hidden hidden" id="acessories_calc">
 									<!-- estimated amount will be inserted here -->
 								</div>
+								<button class="show_calc_field_hidden "><span class="icon">👁️</span></button>
 							</div>
 						</div>
 						
@@ -265,12 +277,20 @@
 				
 				<div class="row input_field">
 				
-					
+					<!--
 					<div class="col-md-12">
 						<input type="checkbox" id="toggleOptional" /> Show Each Calculated Value
 					</div>
+					-->
 					<div class="col-md-12 text-center">
 						<input type="submit" id="price_calc_btn" type="button" class="btn btn-primary" value="Calculate">
+						<button id="cmd" type="button" class="btn btn-primary">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+						  <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+						  <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+						</svg>
+					
+					</button>
 					</div>
 					<div class="col-md-12 text-center">
 						<div id="range" class="flex estimate">
@@ -304,11 +324,9 @@
 				</div>
 						
 				
-				
-				<button id="cmd" type="button" class="btn btn-primary">
-				<span class="glyphicon glyphicon-print"></span> Print
-				
-				</button>
+				<div class="col-md-12 text-center">
+					
+				</div>
 			
 			</form>	
 			<!--
