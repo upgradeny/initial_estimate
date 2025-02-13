@@ -1,8 +1,31 @@
 
 /*--===== General Style =====--*/
+
+
+/*--===== General Style =====--*/
+@font-face {
+  font-family: 'Ysabeau-VariableFont_wght'; 
+  src: url('../fonts/Ysabeau-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+body{
+	background:#e6e6e6;
+	color:#231f20;
+	font-family: 'Ysabeau-VariableFont_wght' , 'Mont', sans-serif;
+	font-size:16px;
+}
+
 body{
 	background:#eeeeef;
 	color:#000;
+}
+h1,h2{
+	font-family: 'Bebas Neue' !important;
+	letter-spacing :1px;
+	
 }
 .container{
 	padding:20px 0;
@@ -16,7 +39,7 @@ body{
     gap: 4%;
 }
 .price_container{
-	max-width:767px;
+	max-width: 800px;
 	margin:0 auto;
 }
 p,span,a,label,li, input::placeholder{
@@ -24,7 +47,7 @@ p,span,a,label,li, input::placeholder{
 }
 .input_field{
 	padding:5px 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 input,select{
     padding: 4px 5px;
@@ -36,7 +59,7 @@ input,select{
 	font-size: 14px !important;
 }
 input.form-control, select.form-control{
-	height: auto;
+	min-height: 28px;
     padding: 4px 5px;
 	color:#231f20;
 	
@@ -73,7 +96,9 @@ label {
 	display:flex;
 }
 .estimate {
-    
+	gap : 10px;
+    justify-content: center;
+	/*
 	font-weight:bold;
     text-align: left;
 	font-size:18px;
@@ -82,13 +107,13 @@ label {
 	border-right: 1px solid #fff;
 	background: #000;
     color: #fff;
-	/*
+	
 	margin-bottom: .5rem;
 	margin-top: .5rem;
 	*/
 }
 .estimate span{
-	color: #fff;
+	color: #000;
 }
 
 #range div{
@@ -186,14 +211,15 @@ h1::after {
     border-bottom: 2px solid #eb2227;
 }
 h2{
-	text-align:center;
-	font-size:18px;
-	border-top:2px solid #eb2227;
-	border-bottom:2px solid #eb2227;
-	padding:10px 0;
+	text-align:left;
+	font-size:26px;
+	color: #eb2227;
+	padding:5px 0;
+	font-weight: bold;
+	margin:0;
 }
 form{
-	padding:15px 0 25px;
+	padding:10px 0 20px;
 	margin: 0 auto;
 	width:100%;
 }
@@ -388,4 +414,42 @@ button, input, optgroup, select, textarea {
     text-align: center;
     border: 1px solid #000;
 	display:none;
+}
+
+.flex_row_inp {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.flex_row_inp > div:nth-child(2) {
+    flex: 1;
+}
+
+.flex_col {
+	display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.flex_row_inp label {
+	flex-basis : 38%;
+}
+.basis_38{
+	flex-basis : 38%;
+}
+#price_calc_btn{
+	max-width:240px;
+	border-radius:25px;
+	margin:10px auto;
+}
+div#range {
+    background: #000;
+    padding: 10px 15px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+}
+div#range span{
+    color: #fff;
 }
