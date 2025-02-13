@@ -62,7 +62,7 @@ $(document).ready(function(){
 			populateAccessories("#accessories", 1, 50);
 
 
-
+/*
     jQuery(".show_calc_field_hidden").click(function () {
 		
         let hiddenField = $(this).parent(".calc_field_flex").find(".calc_field_hidden");
@@ -80,10 +80,29 @@ console.log(classes);
         }
 		event.preventDefault();
     });
+	
+	*/
+	
+	jQuery(".show_calc_field_hidden").change(function () {
+		
+        let hiddenField = $(this).parent(".calc_field_flex").find(".calc_field_hidden");
+		let classes = hiddenField.attr("class");
+        let icon = $(this).find(".icon");
+
+        if ($(this).is(':checked')) {
+            hiddenField.removeClass("hidden").slideDown();
+           // $(this).html('<span class="icon">❌</span>');  // Change to "Hide" with ❌ icon
+        } else {
+            hiddenField.addClass("hidden").slideUp();
+           // $(this).html('<span class="icon">👁️</span>');  // Change back to "Show" with eye icon
+        }
+		//event.preventDefault();
+    });
+	
 
 
 
-
+/*
 	
 			jQuery('#toggleOptional').change(function () {
 				if ($(this).is(':checked')) {
@@ -92,6 +111,7 @@ console.log(classes);
 					$('.calc_field_hidden').hide(); // Hide with animation
 				}
 			});
+*/
 
             populateMainBrands();
             populateSubBrands();
