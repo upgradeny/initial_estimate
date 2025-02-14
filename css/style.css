@@ -76,7 +76,7 @@ input.form-control, select.form-control{
 }
 
 .h1, h1 {
-    font-size: 3.25rem;
+    font-size: 2.5rem;
 	color:#231f20;
 }
 label {
@@ -246,7 +246,7 @@ form{
     cursor: not-allowed;
 }
 #logo{
-	max-width: 160px;
+	max-width: 125px;
 }
 select, #cmd{
 	width:100%;
