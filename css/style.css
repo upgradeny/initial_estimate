@@ -473,7 +473,7 @@ div#range span{
 }
 .show_values_section{
 	display:flex;
-	justify-content : center;
+	justify-content : end;
 	gap : 20px;
 }
 #show_calcs{
