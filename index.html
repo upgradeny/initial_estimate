@@ -27,7 +27,7 @@
 				<img src="images/logo.png" alt="logo" id="logo" class=""/>
 			</div>
 			<div class="col-md-6">
-				<h1 class="" class="">Cabinet Cost <br/>Estimator</h1>
+				<h1 class="" >Cabinet Cost <br/>Estimator</h1>
 			</div>
 		</div>
 		
@@ -303,8 +303,8 @@
 							</div>	
 					</div>	
 					 <a href="#">  </a>
-				<div class="col-md-12 text-center">
-					<div id="estimated_total" class="flex estimate">
+					<div class="col-md-12 text-center">
+						<div id="estimated_total" class="flex estimate">
 							<div>
 								Total
 							
@@ -368,7 +368,7 @@
     <div class="col-md-12" id="">
         <ul id="estimated_total_breakdown" class="estimate_list">
             <li class="estimate_breakdown">
-                <strong>Brand - </strong> <span id="brand_text"> - </span>
+                <strong>Brand - </strong> <span id="brand_text"> </span>
             </li>
             <li class="estimate_breakdown">
                 <strong>Door Style - </strong> <span id="sub_brand_text"></span> :  
@@ -383,16 +383,19 @@
                 <span id="door_finish_calc"></span>
             </li>
             <li class="estimate_breakdown">
-                <strong>Linear Feet - </strong> <span id="linear_feet_calc"></span> : 
+                <strong>Linear Feet : </strong> <span id="linear_feet_calc"></span> 
             </li>
             <li class="estimate_breakdown">
-                <strong>Base Cabinets - </strong> <span id="base_cabinets_calc"></span> :  
+                <strong>Base Cabinets - </strong> <span id="base_cabinets_text"></span> :  
+				<span id="base_cabinets_calc">
             </li>
             <li class="estimate_breakdown">
-                <strong>Wall Cabinets - </strong> <span id="wall_cabinets_calc"></span> :  
+                <strong>Wall Cabinets - </strong> <span id="wall_cabinets_text"></span> :  
+				<span id="wall_cabinets_calc"></span>
             </li>
             <li class="estimate_breakdown">
-                <strong>Tall Cabinets - </strong> <span id="tall_cabinets_calc"></span> :  
+                <strong>Tall Cabinets - </strong> <span id="tall_cabinets_text"></span> :  
+				<span id="tall_cabinets_calc"></span>
             </li>
             <li class="estimate_breakdown">
                 <strong>Drawer Bases - </strong> <span id="drawer_bases_text"></span> :  
@@ -407,11 +410,12 @@
                 <span id="height_calc"></span>
             </li>
             <li class="estimate_breakdown">
-                <strong>Channals:</strong> <span id="channals_text"></span> : 
+                <strong>Channals - </strong> <span id="channals_text"></span> : 
                 <span id="channals_calc"></span>
             </li>
             <li class="estimate_breakdown">
-                <strong>Accessories : </strong> <span id="acessories_calc"></span>
+                <strong>Accessories - </strong> <span id="acessories_text"></span> : 
+				<span id="acessories_calc"></span>
             </li>
             <li class="estimate_breakdown">
                 <strong>Specialty Items : </strong> <span id="speciality_item_calc"></span>
@@ -426,7 +430,7 @@
                 <span id="range_estimate_low"></span> - <span id="range_estimate_high"></span>
             </li>
             <li class="estimate">
-                <strong>Estimated Total:</strong> <span id="estimated_total_value"></span>
+                <strong>Total:</strong> <span id="estimated_total_value"></span>
             </li>
             
         </ul>
@@ -441,215 +445,601 @@
 
 	
 	
-	<div id="editor">
-	
-		<style> 
-			#editor{
-				padding:20px;
-				max-width:600px;
-				margin:10px auto 20px;
+	<div id="editor1" style="font-family: 'Montserrat'">
+	<style>
+
+			@media print {
+				@page {
+					size: 2525px 3300px;
+					margin: 0;
+				}
+				#editor {display: block};
+
+				
 			}
-			#logo_print{
-				max-width:60px;
-				display:inline-block;
-				margin-top: 20px;
-			}
-			#serial_num{
-				font-size:16px;
-				vertical-align:middle;
-				display:inline-block;
-				padding-top:20px;
-			}
-			#editor h2{
-				text-align:center;
-				font-size:24px;
-				border-top:2px solid #000;
-				border-bottom:2px solid #000;
-				padding:10px 0;
-				margin:10px 0;
-			}
-			#editor ul li{
-				padding:12px 10px;
-				font-size:16px;
-			}
-			#editor .text-bold{
-				font-weight:bold;
-			}
-			#editor .text-center{
-				text-align:center;
-			}
-			#editor .text-right{
-				text-align:right;
-			}
-			#editor .text-left{
-				text-align:left;
-			}
-			#editor table {  
-				font-family: arial, sans-serif;  
-				border-collapse: collapse;  
-				width: 100%;  
-				border:2px solid #000;
-				margin:10px 10px;
-			}  
-	  
-			#editor td, #editor th {  
-				border: 1px solid #dddddd;  
-				text-align: left;  
-				padding: 12px;  
-				font-size:16px;
-				vertical-align:middle;
-			}  
-			#editor .img_td, #editor .img_td td {
-				border:0;
+			
+			@font-face {
+			  font-family: 'Montserrat'; 
+			  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+			  font-style: normal;
+			  font-weight: normal;
 			}
 
-			#editor #input_data_table_t_cost , #editor #input_data_table_t_cost tr , #editor #input_data_table_t_cost tr td {
-				border: 0 ;
-				border: none;
-				margin: 0 ;
-				padding: 0 ;
+			@font-face {
+			  font-family: 'Montserrat-Italic'; 
+			  src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+			  font-style: normal;
+			  font-weight: normal;
 			}
-			.thead-dark{
+			
+			
+		
+			#editor1{
+				font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
+			}
+			#editor1 div , #editor1 p , #editor1 span , #editor1 ol {
+				font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
+			}
+		#editor1 .full_width{
+			width:102%;
+			padding:0;
+			margin:0;
+			margin-left:-1%;
+			margin-right:-1%;
+		}
+		#editor1 .bck_light_grey{
+			background:#f7f7f7;
+			padding:20px;
+		}
+		
+		#editor1 .width_logo , #editor1 #logo_print{
+				width:360px;
+			}
+			
+			#editor1 h1{
+				font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
+				font-size: 80px;
+				font-weight: 700;
+				line-height: 110px;
+				letter-spacing: 0em;
+				text-align: center;
 				color:#000;
-				font-size:24px;
-				font-weight:bold;
-				text-align:center;
+				margin-bottom : 22px;
 			}
-			.table_print_pdf{
-				margin:15px 10px;
-				border: 1px solid #dddddd;
+			
+			#editor1 h1::after {
+				text-align: center;
+				content: ' ';
+				margin: 20px auto;
+				width: 200px;
+				display: block;
+				height: 2px;
+				border-bottom: 2px solid #eb2227;
 			}
-		</style> 
+			
+			h1,h2{
+				font-family: 'Bebas Neue' , 'Montserrat' , 'Mont', sans-serif! important;
+			}
+			
+		#editor1 #heading_project_name{
+			font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 30px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:grey !important;
+			
+			padding-left:60px;
+		}
+		#editor1 #pdf_consultation_recap{
+				margin-top:-15px;
+			}
+			#editor1 h2{
+				font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
+				font-size: 48px;
+				font-weight: 700;
+				line-height: 52px;
+				letter-spacing: 0em;
+				text-align: left;
+				margin:10px 0;
+				color: #eb2227;
+			}
+			
+			
+			
+		#editor1 #specs_div , #editor1 .table_bck{
+			display: flex;
+			justify-content: space-between;
+			padding: 10px;
+		}
+		.top_25{}
+		#editor1 .flex{
+			display:flex;
+		}
+		#editor1 #head{
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			margin:100px 0px; 
+		}
+		#editor1 #head .contact_details{
+			font-size: 28px;
+			font-weight: 400;
+			line-height: 36px;
+			letter-spacing: 0em;
+			text-align: right;
+			color:#000;
+			padding-right:15px;
+		}
+		#editor1 #project_details .row{
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		#editor1 #project_details .row .left_sec{
+			font-size: 33px;
+			font-weight: 500;
+			line-height: 51px;
+			letter-spacing: 0em;
+			text-align: left;
+
+		}
+		#editor1 #project_details .row .right_sec{		
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #565656;
+			margin-right:auto;
+		}
+		#editor1 #project_details .row .right_sec span{		
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #000;
+		}
+		#editor1 #project_details .input_value{
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#000;
+		}
+		#editor1 .v_center{
+			align-items: center;
+		}
+		#editor1 .flex_table{
+			flex-basis: 48%;
+			
+		}
+		#editor1 .flex_table.w_96{
+			flex-basis: 96%;
+			
+		}
+		#editor1 .flex_table.w_60{
+			flex-basis: 60%;
+			
+		}
+		#editor1 .flex_table.w_38{
+			flex-basis: 38%;
+			
+		}
+		#editor1 .flex_table.w_28{
+			flex-basis: 28%;	
+		}
+		#editor1  #appliances{
+			margin-top:100px;
+		}
+		#editor1  #appliances .bck_light_grey ,#editor1  #appliances .bck_light_grey .table_bck{
+			padding-top: 0px;
+		}
+
+		 #editor1  #appliances .bck_light_grey{
+			 padding : 0 !important;
+		 }
+		#editor1  .appliances_list{
+			display:flex;
+		}
 		
-		<table class="img_td table_print_1 table_print_pdf" id="table_print_1">
-			<tbody>
-				<tr class="img_td">
-					<td><img src="images/logo.png" alt="logo" id="logo_print" class=""> </td>
-					<td class="text-right"><br> <span id="pdf_current_date"></span> </td>
-				</tr>
-			</tbody>
-		</table>
-
-		<div class="br_line"><br></div>
+		.pad-r-10{
+			padding-right:10px;
+		}
+		#editor1 .m-r-10{
+			margin-right:10px;
+		}
+		#editor1 .table_bck{
+			background:#f7f7f7;
+			
+		}
+		#editor1 .flex_table{
+			
+			padding:10px 0;
+			display:flex;
+			justify-content: flex-start;
+		}
 		
-		<table id="input_data_table_3" class="table_print_pdf">
-			<tbody>
-				<tr>
-					<td colspan="3" class="text-bold text-center">Brand - <span id="pdf_brand_text"> </span></td>
-				</tr>
-				
-				<tr>
-					<td class="text-bold"> Estimated Total</td>
-				
-					<td class="text-bold text-center" id="pdf_estimated_total_value" colspan="2">  </td>
-
-				</tr>
-				
-				<tr class=""text-bold">
-					<td class="text-bold"> Description </td>
-					<td class="text-bold"> Selected Option </td>
-					<td class="text-bold"> Estimate </td>
-				</tr>
-				
-				
-				<tr>
-					<td class=""> Sub Brand </td>
-					<td id="pdf_sub_brand_text"> </td>
-					<td class="" id="pdf_sub_brand_calc"> 200  </td>
-
-				</tr>
-				<tr>
-					<td>Wood Specie </td>
-					<td id="pdf_wood_specie_text">- </td>
-					<td id="pdf_wood_specie_calc">- </td>
-				</tr>
-				<tr>
-					<td> Linear Feet </td>
-					<td id="pdf_linear_feet_text"> - </td>
-					<td id="pdf_linear_feet_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Base Cabinets </td>
-					<td id="pdf_base_cabinets_text"> - </td>
-					<td id="pdf_base_cabinets_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Wall Cabinets </td>
-					 <td id="pdf_wall_cabinets_text"> - </td>
-					<td id="pdf_wall_cabinets_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Tall Cabinets </td>
-					<td id="pdf_tall_cabinets_text"> - </td>
-					<td id="pdf_tall_cabinets_calc"> - </td>
-				</tr>
-				
-			</tbody>
-		</table>	
-
-		<div class="br_line"><br></div>
+		#editor1 .flex_table div .flex {
+			padding: 30px 10px;
+			border-bottom: 1px solid #5656563B;
+			display:flex;
+			justify-content:space-between;
+			
+		}
+		#appliances > div , #appliances > div > div{
+			padding-top:0 px !important;
+		}
 		
-		<table id="input_data_table_4" class="table_print_pdf">
-			<tbody>
-				<tr class=""text-bold">
-					<td class="text-bold"> Description </td>
-					<td class="text-bold"> Selected Option </td>
-					<td class="text-bold"> Estimate </td>
-				</tr>
-				<tr>
-					<td> Drawer Bases </td>
-					<td id="pdf_drawer_bases_text"> - </td>
-					<td id="pdf_drawer_bases_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Molding </td>
-					<td id="pdf_molding_text"> - </td>
-					<td id="pdf_tall_cabinets_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Height </td>
-					<td id="pdf_height_text"> - </td>
-					<td id="pdf_height_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Channals  </td>
-					<td id="pdf_channals_text"> - </td>
-					<td id="pdf_channals_calc"> - </td>
-				</tr>
-				<tr>
-					<td> Accessories  </td>
-					<td id="pdf_accessories_text"> - </td>
-					<td id="pdf_accessories_calc"> - </td>
-				</tr>
-			</tbody>
-		</table>
-
-		<div class="br_line"><br></div>
+		#editor1 .flex_table div.justify-normal{
+			justify-content:normal;
+		}
+		#editor1 .flex_table .border_0{
+			border-bottom : 0;
+		}
+		#editor1  .appliances_list, #editor1  .appliances_list div{
+			margin-top:0 !important;
+		}
+		#editor1 .flex_table div ,#editor1 .td_name{
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
+		#editor1 .flex_table div{
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+			margin: 0;
+			
+			
+		}
 		
-		<table id="input_data_table_5" class="table_print_pdf">
-			<tbody>
-				<tr>
-					<td> Speciality Items </td>
-					<td id="pdf_speciality_item_calc"> - </td>
-				</tr>
-		</tbody>
-		</table>	
-
-		<div class="br_line"><br></div>
+		#editor1 #payment_sch{
+			margin-top: 5px !important;
+			
+		}
+		#editor1 #payment_sch h2{
+			line-height:60px;
+		}	
+		#editor1 .flex_table div:last-child{
+			/*border:0;*/
+		}
+		#editor1 .flex_table .td_value{
+			text-align:left !important;
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
 		
-		<div class="table_print_1">
-			<table id="input_data_table_t_cost">
-				<tbody>
+		#editor1 .flex_table.w_96 .td_value.text-left{
+			text-align:left !important;
+		}
+		
+		#editor1 #vision h3{
+			font-size: 54px;
+			font-weight: 700;
+			line-height: 60px;
+			letter-spacing: 0em;
+			text-align: center;
+			color: red;
+		}
+		
+		#editor1 #terms_conditions ol li , #editor1 #terms_conditions p{
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
+		#editor1 .gap-10{
+			gap:10px;
+		}
+		
+		#editor1 #main{
+			padding:0 130px;
+		}
+		#sign_date{
+			padding-top:40px;
+		}
+		#editor1 #sign_date div{
+			display:flex;
+			justify-content:space-between;
+			font-size: 33px;
+			font-weight: 700;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#000;
+		}
+		#editor1 .flex_center {
+			justify-content: center;
+			display: flex
+		}
+		#editor1 .inline_flex {
+			display: inline-flex
+		}
+		.designer_row{
+			display: flex;
+			justify-content: center;
+			margin-top:40px;
+			gap: 50px;
+		}
+		#editor1 .designer_para{
+			font-size: 36px;
+			font-weight: 400;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+			margin:0;
+			padding:0;
+		}
+		#editor1 .designer_para span{
+			text-decoration:underline;
+			font-size: 36px;
+		}
+		#editor1 .gap-25{
+			gap:25px;
+		}
+		#editor1  .text-bold{
+			font-weight : 700 !important;
+			color:#000;
+		}
+		#editor1 .flex_12{
+			flex-basis: 12%;
+		}
+		#editor1 .flex_7{
+			flex-basis: 7%;
+		}
+		#editor1 .flex_1{
+			flex: 1;
+		}
+		
+		#editor1 .flex_72{
+			flex-basis: 72%;
+		}
+		#editor1 .flex_col{
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		.m_top_20{
+			margin-top: 20px;
+		}
+		.text-center{
+			text-align:center;
+		}
+		#specs , #specs_2{
+			display: flex;
+			margin-top : 25px;
+		}
+		#specs_2{
+			margin-top : 100px;
+		}
+		.justify-start{
+			justify-content: flex-start;
+		}
+		.justify-space-between{
+			justify-content: space-between;
+		}
+
+		#editor1 .mt-0 ,#editor1 .pt-0 , .mt-0 , .pt-0{
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+		
+		#editor1 #specs_div {
+			height: 100%;
+		}
+
+		#editor1 #specs_div_2 {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+			justify-content: space-between;
+			height: 100%;
+			border: 0;
+		}
+
+		#editor1 #payment_sch {
+			padding-bottom: 0;	
+		}
+
+		#editor1 .flex_basis_49{
+			flex-basis:50%;
+		}
+		#editor1 .flex_basis_48 , w_48{
+			flex-basis: 48%;
+		}
+		#editor1 .flex_basis_30{
+			flex-basis:30%;
+		}
+		#editor1 .flex_basis_25{
+			flex-basis:30%;
+		}
+		#editor1 .flex_basis_32{
+			flex-basis:32%;
+		}
+		.top_25{
+			margin-top:25px;
+		}
+		#editor1 .footer{
+			position:absolute;
+			bottom:85px;
+			padding-right: 130px;
+		}
+
+		#editor1 #specs_div , #editor1 #whats_next_div,#editor1 #payment_sch_div{
+			margin-top:15px !important;
+		}
+		#editor1 #payment_sch_div ,#editor1 #whats_next_div,#editor1 #specs_div {
+			padding-bottom: 20px;
+			
+		}
+		#pdf_current_date{
+			font-size:28px;
+		}
+		.upper_cap{
+			text-transform: uppercase;
+		}
+		#editor1 #appliances h2{
+			margin-bottom:15px;
+		}
+		.range_val , .total_val{
+			font-size:42px;
+		}
+		.main_heading{
+			justify-content : center;
+			text-align:center;
+		}
+			
+	</style>
+		
+		
+		<div class="full_width">
+			
+		</div>
+		
+		<div id="main" class="row_section">
+		
+			<div id="head" class="flex">
+				
+				<div class="w_48 text-center">	
+					<div class="width_logo text-center"><img src="images/logo.png" alt="logo" id="logo_print" class=""> 
+					<br> <br/><span id="pdf_current_date"></span></div>
+				</div>
+				<div class="w_48">
+					<h1 class="upper_cap text-center main_heading">Cabinet Cost <br/>Estimator</h1>	
+				</div>
+			</div>
+
+			<div id="specs" class="table_container justify-space-between">
 					
-					<tr>
-						<td class="text-center">
-							<h3 class="text-center"> Range : <span id="pdf_range_estimate_low"> - </span> -  <span id="pdf_range_estimate_high"> - </span> </h3>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<p> </p>
-		</div>		
+					
+						<div class="flex_table flex_col w_48 border_0">
+							<h2>Cabinet Details</h2>
+							<br/>
+							<div id="specs_div" class="table_bck flex_col border_0">
+								<div class=" flex"> 
+									<div class="text-bold ">Main Brand - <span id="pdf_brand_text"> </span> </div>  
+									
+								</div>
+								<div class="flex"> 
+									<div class="text-bold ">Door Style -  <span id="pdf_sub_brand_text" class=""> </span> </div> 
+									<div class="pdf_option_value" id = "pdf_sub_brand_calc"></div>
+								</div>
+								<div class="flex"> 
+									<div class=" text-bold ">Wood Specie - <span id="pdf_wood_specie_text" class=""> </span></div> 
+									<div class="pdf_option_value" id = "pdf_wood_specie_calc"></div>					
+								</div>
+								<div class="flex">
+									<div class=" text-bold ">Door Finish -  <span id="pdf_door_finish_text" class=""> </span> </div> 
+									<div class="pdf_option_value" id = "pdf_door_finish_calc"></div>  
+								</div>
+								
+							</div>		
+						</div>
+						<div class="flex_table flex_col w_48">
+							<h2>Space Details</h2>
+							<br/>
+							<div id="specs_div" class="table_bck flex_col border_0">
+								<div class=" flex"> 
+									<div class="text-bold ">Linear Feet </div>	
+									<div class="pdf_option_value" id = "pdf_linear_feet_calc"></div>									
+								</div>
+								<div class="flex"> 
+									<div class="text-bold ">Height -  <span id="pdf_height_text" class=""></span> 			</div>	
+									<div class="pdf_option_value" id ="pdf_height_calc"></div>
+								</div>
+								<div class="flex"> 
+									<div class=" text-bold ">Base Cabinet - <span id="pdf_base_cabinets_text" class=""> </span> 			</div>		
+									<div class="pdf_option_value" id ="pdf_base_cabinets_calc"></div>
+								</div>
+								<div class="flex"> 
+									<div class=" text-bold ">Wall cabinet -  <span id="pdf_wall_cabinets_text" class=""> </span> </div>  
+									<div class="pdf_option_value" id ="pdf_wall_cabinets_calc"></div>
+								</div>
+								
+							</div>		
+								
+						
+						</div>
+			</div>
+				
+			<div id="specs_2" class="table_container justify-space-between">
+					
+					
+					<div class="flex_table flex_col w_48">
+							<h2>Enhancements</h2>
+							<br/>
+							<div id="specs_div" class="table_bck flex_col border_0">
+								<div class=" flex"> 
+									<div class="text-bold ">Tall Cabinets -  <span id="pdf_tall_cabinets_text"> </span> </div>	
+									<div class="pdf_option_value" id = "pdf_tall_cabinets_calc"></div>									
+								</div>
+								<div class="flex"> 
+									<div class="text-bold ">Drawer Bases -  <span id="pdf_drawer_bases_text"> </span> 	</div>	
+									<div class="pdf_option_value" id ="pdf_drawer_bases_calc"></div>
+								</div>
+								<div class="flex"> 
+									<div class=" text-bold ">Molding - <span id="pdf_molding_text" class=""> </span> 			</div>		
+									<div class="pdf_option_value" id ="pdf_molding_calc"></div>
+								</div>
+							</div>		
+								
+						
+					</div>
+						
+					<div class="flex_table flex_col w_48 border_0">
+							
+							<h2>Specialities</h2>
+							<br/>
+							<div id="specs_div" class="table_bck flex_col border_0">
+								<div class="flex"> 
+									<div class="text-bold ">Channals -   <span id="pdf_channals_text" class=""> </span>  </div> 
+									<div class="pdf_option_value" id = "pdf_channals_calc"></div>
+								</div>
+								<div class="flex"> 
+									<div class=" text-bold ">Accessories - <span id="pdf_accessories_text" class=""> </span>  </div>  
+									<div class="pdf_option_value" id = "pdf_accessories_calc"></div>					
+								</div>
+								<div class="flex">
+									<div class=" text-bold "> Speciality Items </div> 
+									<div class="pdf_option_value" id = "pdf_speciality_item_calc"></div>  
+								</div>
+								
+							</div>		
+					</div>
+						
+			</div>
+			
+			<br/>
+			<br/>
+			<br/>
+			<div class="text-center">
+				<h3 class="text-center range_val"> Range : <span id="pdf_range_estimate_low"> - </span> -  <span id="pdf_range_estimate_high"> - </span> </h3>
+			</div>
+			
+			<div class="text-center">
+				<h3 class="text-center total_val"> Total : <span id="pdf_estimated_total_value"> - </span>  </h3>
+			</div>
+		</div><!-- end main -->
+
 		<!-- don't delete this -->
 	</div>
 
@@ -662,14 +1052,8 @@
 	<script>
 		$(document).ready(function(){
 			$('#cmd').click(function () {  
-/*			
-				$('#list_output , .estimate_breakdown').show();
-				
-				$("html, body").animate({
-					scrollTop: $("#list_output").offset().top + 50
-				}, 800);
-				*/
-				 printJS('editor', 'html');								
+
+				 printJS('editor1', 'html');								
 			});				 
 		});	
 	 </script>
