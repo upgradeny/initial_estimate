@@ -295,26 +295,18 @@ console.log(classes);
 				jQuery('#speciality_item_calc , #pdf_speciality_item_calc').text(  " $ " + round_2_digits ( speciality_item ) );
 				
 				
-				let currentDate = new Date().toLocaleString();
+				let currentDate = new Date().toLocaleDateString();
 				jQuery('#pdf_current_date').text(currentDate);
 				
 				jQuery('.estimate , #range , .show_values_section').slideDown(400);
 				jQuery('#range').css("display", "inline-block")
 				jQuery('.show_values_section').css("display", "flex")
 				
-				jQuery('#pdf_linear_feet_text').text(linear_feet);
-				jQuery('#pdf_wood_specie_text').text(wood_specie);
-				jQuery('#pdf_door_finish_text').text(door_finish);
-				jQuery('#pdf_base_cabinets_text').text(base_cabinets);
-				jQuery('#pdf_wall_cabinets_text').text(wall_cabinets);
-				jQuery('#pdf_tall_cabinets_text').text(tall_cabinets);
-				/*
-				jQuery('#pdf_drawer_bases_text').text(jQuery('#drawer_bases  option:selected').text());
-				jQuery('#pdf_molding_text').text(jQuery('#molding  option:selected').text());
-				jQuery('#pdf_height_text').text(jQuery('#height  option:selected').text());
-				jQuery('#pdf_channals_text').text(jQuery('#channals  option:selected').text());
-				*/
-				jQuery('#pdf_accessories_text').text(accessories);
+				jQuery('#base_cabinets_text , #pdf_base_cabinets_text').text(base_cabinets);
+				jQuery('#wall_cabinets_text , #pdf_wall_cabinets_text').text(wall_cabinets);
+				jQuery('#tall_cabinets_text , #pdf_tall_cabinets_text').text(tall_cabinets);
+				jQuery('#acessories_text , #pdf_accessories_text').text(tall_cabinets);
+				
 				
 				
 			});	
