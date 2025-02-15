@@ -78,7 +78,7 @@ input.form-control, select.form-control{
 }
 
 .h1, h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
 	color:#231f20;
 }
 label {
@@ -102,6 +102,9 @@ label {
 	gap : 10px;
     justify-content: center;
 	display:none;
+	font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 	/*
 	font-weight:bold;
     text-align: left;
@@ -208,15 +211,18 @@ div#container_rows {
 
 h1{
 	margin: 10px auto;
+	letter-spacing:3px;
+	line-height: 42px;
 }
 h1::after {
     text-align: center;
     content: ' ';
-    margin: 10px auto;
+    margin: 0 auto;
     width: 50px;
     display: block;
     height: 2px;
     border-bottom: 2px solid #eb2227;
+	
 }
 h2{
 	text-align:left;
@@ -248,7 +254,7 @@ form{
     cursor: not-allowed;
 }
 #logo{
-	max-width: 125px;
+	max-width: 135px;
 }
 select, #cmd{
 	width:100%;
@@ -256,7 +262,7 @@ select, #cmd{
 #resultsTable{
 	display:none;
 }
-#editor{
+#editor1{
 	display:none;
 }
 /*
@@ -429,6 +435,7 @@ button, input, optgroup, select, textarea {
     gap: 5px;
     align-items: baseline;
     justify-content: space-between;
+	padding-left: 10px;
 }
 .flex_row_inp > div:nth-child(2) {
     flex: 1;
@@ -446,9 +453,12 @@ button, input, optgroup, select, textarea {
 	flex-basis : 38%;
 }
 #price_calc_btn{
-	max-width:240px;
-	border-radius:25px;
-	margin:10px auto;
+	max-width: 200px;
+    border-radius: 25px;
+    margin: 10px auto;
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+    font-size: 16px !important;
 }
 div#range {
     background: #000;
